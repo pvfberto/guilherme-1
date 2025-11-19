@@ -1,0 +1,13 @@
+# Cloudflare Pages Build Configuration
+
+# Build command
+npm run build
+
+# Build output directory
+dist
+
+# Root directory (project root)
+/
+
+# Environment variables
+NODE_VERSION=18

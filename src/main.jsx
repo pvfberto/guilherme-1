@@ -2,11 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import ErrorBoundary from './components/ErrorBoundary.jsx'
-// import './index.css' // TEMPORARIAMENTE DESABILITADO PARA DEBUG - Tailwind pode estar causando erro
+import './index.css'
 
 console.log('Main.jsx loaded');
 console.log('React version:', React.version);
-console.log('⚠️ CSS desabilitado para debug');
 
 const root = document.getElementById('root');
 console.log('Root element:', root);
