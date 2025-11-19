@@ -105,7 +105,21 @@ A landing page usa a fonte **Inter** (similar à SF Pro Display da Apple). Impor
 
 ## 🔗 Deploy
 
-Para fazer deploy, build o projeto e suba a pasta `dist` para seu servidor:
+### Cloudflare Pages (Recomendado)
+
+Este projeto está otimizado para deploy no Cloudflare Pages. Configurações:
+
+- **Build command:** `npm run build`
+- **Build output directory:** `dist`
+- **Node version:** `18` (detectado automaticamente via `.node-version`)
+
+Os arquivos `public/_redirects` e `public/_headers` já estão configurados.
+
+📖 **[Ver guia completo de deploy](DEPLOY.md)**
+
+### Deploy Manual
+
+Para fazer deploy em outro servidor, build o projeto e suba a pasta `dist`:
 
 ```bash
 npm run build
