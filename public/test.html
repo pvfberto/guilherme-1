@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Cloudflare Pages</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #F5F5F7;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+        h1 {
+            color: #1c1c1e;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        p {
+            color: #86868b;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        .status {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #34C759;
+            color: white;
+            border-radius: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .info {
+            background: #F5F5F7;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: left;
+            margin-top: 24px;
+        }
+        .info h3 {
+            color: #1c1c1e;
+            font-size: 18px;
+            margin: 0 0 12px 0;
+        }
+        .info ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #666;
+        }
+        .info li {
+            margin-bottom: 8px;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 32px;
+            background: #0071e3;
+            color: white;
+            text-decoration: none;
+            border-radius: 24px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="status">✓ Funcionando</div>
+        <h1>Cloudflare Pages - OK!</h1>
+        <p>Se você está vendo esta página, significa que o Cloudflare Pages está funcionando corretamente.</p>
+
+        <div class="info">
+            <h3>Informações de Deploy</h3>
+            <ul>
+                <li><strong>Status:</strong> HTML estático carregando corretamente</li>
+                <li><strong>Build:</strong> Arquivos sendo servidos da pasta dist</li>
+                <li><strong>DNS:</strong> Domínio resolvendo corretamente</li>
+            </ul>
+        </div>
+
+        <p style="margin-top: 24px; font-size: 14px;">
+            Acesse <code style="background: #f0f0f0; padding: 4px 8px; border-radius: 4px;">/index.html</code> para ver a página principal.
+        </p>
+
+        <a href="/" class="button">Ir para Página Principal</a>
+
+        <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid #e0e0e0;">
+            <p style="font-size: 14px; color: #999; margin: 0;">
+                <strong>Debug Info:</strong><br>
+                Timestamp: <span id="timestamp"></span><br>
+                User Agent: <span id="userAgent"></span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString('pt-BR');
+        document.getElementById('userAgent').textContent = navigator.userAgent.substring(0, 80) + '...';
+        console.log('Test page loaded successfully');
+        console.log('Current URL:', window.location.href);
+        console.log('Timestamp:', new Date().toISOString());
+    </script>
+</body>
+</html>

@@ -11,7 +11,28 @@
     <meta name="description" content="Transforme sua prática médica em 90 dias. Trabalhe 3 dias e fature 50k+ por mês com o Método Paciente de Alto Lucro.">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: system-ui, -apple-system, sans-serif;">
+        <div style="text-align: center;">
+          <div style="width: 50px; height: 50px; border: 3px solid #f3f3f3; border-top: 3px solid #0071e3; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+          <p style="color: #666;">Carregando...</p>
+        </div>
+      </div>
+    </div>
+    <noscript>
+      <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: system-ui, -apple-system, sans-serif; text-align: center; padding: 20px;">
+        <div>
+          <h1 style="color: #1c1c1e; margin-bottom: 10px;">JavaScript Necessário</h1>
+          <p style="color: #666;">Por favor, habilite o JavaScript no seu navegador para visualizar esta página.</p>
+        </div>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
   </body>
 </html>
